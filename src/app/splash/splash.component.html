@@ -1,0 +1,8 @@
+<div class="splash-container" [ngClass]="{ 'fade-out': fadeOutSplash }">
+  <div class="text-wrapper">
+    <h1 #welcomeText class="welcome-text">{{ displayedText }}</h1>
+    <div class="progress-bar-container">
+      <div class="progress-bar" [style.width.px]="progress"></div>
+    </div>
+  </div>
+</div>

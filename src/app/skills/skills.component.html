@@ -1,0 +1,35 @@
+<!-- <section id="skills" class="py-6 skills-section">
+  <div class="container text-center">
+
+    <h2 class="text-3xl font-bold mb-5">My Skills</h2>
+
+ <div class="grid">
+
+  <div class="col-6 sm:col-4 md:col-3 lg:col-2" *ngFor="let skill of skills">
+    <div class="skill-card shadow-3 border-round-xl flex flex-column align-items-center justify-content-center p-4 m-2">
+      <img [src]="skill.icon" alt="{{skill.name}}" class="skill-icon mb-1" />
+      <span class="fw-semibold text-xl">{{skill.name}}</span>
+    </div>
+  </div>
+</div>
+
+
+  </div>
+</section> -->
+
+<div class="skills-section py-6 text-center">
+  <div class="container">
+  
+<h2 class="text-5xl font-bold text-warning mb-2">Skills </h2>
+    <p class="text-lg text-600 text-white mb-6">My tech stack visualized as planets 🌍</p>
+    <div class="skill-galaxy flex justify-content-center flex-wrap mt-8">
+      <div class="planet text-center" *ngFor="let skill of skills">
+        <div class="planet-circle" [style.background]="skill.color">
+          <span>{{ skill.icon }}</span>
+        </div>
+        <h5 class="mt-2">{{ skill.name }}</h5>
+        <!-- <p class="text-500">{{ skill.level }}%</p> -->
+      </div>
+    </div>
+  </div>
+</div>

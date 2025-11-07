@@ -1,0 +1,44 @@
+/* Navbar Gradient Background */
+.custom-navbar {
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364); /* dark teal gradient */
+  animation: slideDown 0.8s ease-out;
+}
+
+/* Slide down effect */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Navbar Links */
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background: #ffcc00; 
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover {
+  /* color: #ffcc00 !important;  */
+  color: #5ebdf1cf !important;  
+}
+
+.nav-link:hover::after {
+  width: 50%;
+}

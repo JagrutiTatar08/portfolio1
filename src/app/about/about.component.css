@@ -1,0 +1,89 @@
+/* About Section */
+/* .about-section {
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  color: #fff;
+}
+
+
+.text-highlight {
+  color: #ffcc00;
+  text-shadow: 0 0 12px rgba(255, 204, 0, 0.6);
+}
+
+.about-img {
+  max-width: 300px;
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.about-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.p-card {
+  background: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(8px);
+  color: #fff !important;
+} */
+.about-section {
+  /* background: linear-gradient(135deg, #f3f4f6, #ffffff); */
+  height: 100vh;
+   background: linear-gradient(
+      rgba(0, 0, 0, 0.6), 
+      rgba(0, 0, 0, 0.6)
+    ), 
+    url('https://t4.ftcdn.net/jpg/08/14/54/71/360_F_814547144_an4xSu5K7CVQM1oAukpYURr3h3fUqeql.jpg') no-repeat center center/cover;
+}
+
+.profile-card {
+  background: #fff;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+.profile-card:hover {
+  transform: translateY(-20px);
+}
+
+.profile-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border: 5px solid #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Timeline Styling */
+.timeline {
+  position: relative;
+  padding-left: 30px;
+  list-style: none;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 15px;
+  width: 3px;
+  height: 100%;
+  background: #e0e0e0;
+}
+.timeline li {
+  position: relative;
+  margin-bottom: 2rem;
+}
+.timeline-icon {
+  position: absolute;
+  left: -5px;
+  top: 0;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.timeline-content {
+  margin-left: 50px;
+  background: #fff;
+  border-radius: 12px;
+}

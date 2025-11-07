@@ -1,0 +1,19 @@
+.footer-section {
+  /* background: linear-gradient(90deg, #0f2027, #203a43, #2c5364); */
+   background: linear-gradient(
+      rgba(0, 0, 0, 0.6), 
+      rgba(0, 0, 0, 0.6)
+    ), 
+    url('https://t4.ftcdn.net/jpg/08/14/54/71/360_F_814547144_an4xSu5K7CVQM1oAukpYURr3h3fUqeql.jpg') no-repeat center center/cover;
+}
+
+.social-icon {
+  font-size: 1.5rem;
+  color: #ddd;
+  transition: color 0.3s ease, transform 0.2s;
+}
+
+.social-icon:hover {
+  color: #ffc107; /* gold hover */
+  transform: scale(1.2);
+}
