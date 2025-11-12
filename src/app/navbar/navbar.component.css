@@ -1,9 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&display=swap');
-/* Smooth scrolling between sections */
-html {
-  scroll-behavior: smooth;
-}
-
 /* Navbar Glass Effect with Slide Down */
 .custom-navbar {
   background: linear-gradient(180deg, #0f2027cc, #203a43cc, #2c5364cc);

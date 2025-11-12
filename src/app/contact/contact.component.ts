@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { FormsModule, ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
-import { InputTextarea } from 'primeng/inputtextarea';
+import {TextareaModule} from 'primeng/textarea';
 import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 import emailjs from 'emailjs-com';
@@ -17,7 +17,7 @@ import emailjs from 'emailjs-com';
     ReactiveFormsModule,
     ButtonModule,
     InputTextModule,
-    InputTextarea,
+    TextareaModule,
     ToastModule
   ],
   providers: [MessageService],

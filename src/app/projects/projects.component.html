@@ -1,27 +1,29 @@
 <div class="projects-section py-6">
   <div class="container text-center">
     <h2 class="text-4xl font-bold text-warning mb-2">My Projects</h2>
-    <p class="text-600 text-white mb-6">Selected works I’m proud of 🚀</p>
+    <p class="text-600 text-white mb-5">A few of my key projects 🚀</p>
 
-    <div class="grid justify-content-center gap-4">
+    <div class="grid justify-content-center gap-5">
       <div
         *ngFor="let project of projects"
-        class="col-12 md:col-5 project-card"
+        class="col-12 sm:col-6 lg:col-4 project-card"
       >
-        <div
-          class="card-bg"
-          [style.backgroundImage]="'url(' + project.image + ')'"
-        ></div>
+        <div class="card-inner">
+          <div
+            class="card-bg"
+            [style.backgroundImage]="'url(' + project.image + ')'"
+          ></div>
 
-        <div class="card-info">
-          <h3>{{ project.title }}</h3>
-          <p>{{ project.shortDesc }}</p>
-          <a
-            [href]="project.link"
-            target="_blank"
-            class="p-button p-component mt-2"
-            >View Project</a
-          >
+          <div class="overlay">
+            <h3 class="text-xl font-semibold">{{ project.title }}</h3>
+            <p class="mt-2">{{ project.shortDesc }}</p>
+            <a
+              [href]="project.link"
+              target="_blank"
+              class="p-button p-component mt-3 text-decoration-none font-bold text-white"
+              >View Project</a
+            >
+          </div>
         </div>
       </div>
     </div>

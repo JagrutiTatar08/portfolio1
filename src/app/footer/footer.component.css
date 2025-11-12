@@ -1,19 +1,37 @@
 .footer-section {
-  /* background: linear-gradient(90deg, #0f2027, #203a43, #2c5364); */
-   background: linear-gradient(
-      rgba(0, 0, 0, 0.6), 
-      rgba(0, 0, 0, 0.6)
-    ), 
-    url('https://t4.ftcdn.net/jpg/08/14/54/71/360_F_814547144_an4xSu5K7CVQM1oAukpYURr3h3fUqeql.jpg') no-repeat center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.75)),
+    url("https://t4.ftcdn.net/jpg/08/14/54/71/360_F_814547144_an4xSu5K7CVQM1oAukpYURr3h3fUqeql.jpg")
+      no-repeat center center / cover;
+  color: #fff;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  padding: 3rem 1rem;
 }
 
-.social-icon {
-  font-size: 1.5rem;
-  color: #ddd;
-  transition: color 0.3s ease, transform 0.2s;
+.footer-divider {
+  width: 60px;
+  height: 3px;
+  background-color: #ffc107;
+  border-radius: 2px;
 }
 
-.social-icon:hover {
-  color: #ffc107; /* gold hover */
-  transform: scale(1.2);
+.footer-quote {
+  font-size: 0.95rem;
+  color: #f1f1f1;
+  letter-spacing: 0.3px;
+}
+
+.footer-section p {
+  margin-bottom: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .footer-quote {
+    font-size: 0.85rem;
+  }
+
+  .footer-divider {
+    width: 45px;
+    height: 2px;
+  }
 }
