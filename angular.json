@@ -21,16 +21,14 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
+              "src/assets",
+              "src/favicon.ico"
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-             
               "node_modules/primeicons/primeicons.css",
               "node_modules/primeflex/primeflex.css",
+              "node_modules/aos/dist/aos.css",
               "src/styles.css"
             ],
             "scripts": [

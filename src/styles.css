@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+/* Hide default scrollbar but keep scrolling functionality */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}

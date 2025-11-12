@@ -1,113 +1,75 @@
-<!-- <section class="about-section py-5">
-  <div class="container mt-6">
-    <div class="grid align-items-center">
+<div class="about-section text-white py-6">
+  <div class="container">
+    <h2 class="text-5xl font-bold text-warning text-center mb-2" data-aos="fade-down">
+      About Me
+    </h2>
+    <p class="text-lg text-300 text-center mb-6" data-aos="fade-up">
+      A glimpse into my journey as a developer 🚀
+    </p>
 
-      <div class="col-12 md:col-5 text-center mb-4 mb-md-0">
-        <img src="https://static.vecteezy.com/system/resources/previews/036/290/329/non_2x/about-us-metaphor-company-information-flat-illustration-template-business-profile-office-information-customer-support-our-team-about-company-vector.jpg" 
-             alt="About Me" 
-             class="about-img img-fluid shadow-3 border-round-2xl" />
-      </div>
-
-      <div class="col-12 md:col-7">
-        <h2 class="fw-bold mb-3 text-highlight">About Me</h2>
-        <p class="fs-5 opacity-80 mb-4">
-          I'm <span class="fw-semibold">Jagruti</span>, a passionate 
-          <strong>Full Stack Developer</strong> who loves crafting 
-          user-friendly and scalable web applications.  
-          With expertise in <span class="text-warning">Angular</span>, 
-          <span class="text-success">Node.js</span>, and 
-          <span class="text-info">MongoDB</span>,  
-          I enjoy turning complex problems into elegant solutions.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore in dignissimos officia explicabo atque aliquam accusamus dolore hic laudantium facere.Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore in dignissimos officia explicabo atque aliquam accusamus dolore hic laudantium facere.
-        </p>
-
-
-        <div class="grid">
-          <div class="col-12 sm:col-6 lg:col-4 mb-3">
-            <p-card class="shadow-2 border-round-xl text-center">
-              <h3 class="fw-bold text-warning">50+</h3>
-              <p class="mb-0">Projects Completed</p>
-            </p-card>
-          </div>
-          <div class="col-12 sm:col-6 lg:col-4 mb-3">
-            <p-card class="shadow-2 border-round-xl text-center">
-              <h3 class="fw-bold text-success">3+</h3>
-              <p class="mb-0">Years of Experience</p>
-            </p-card>
-          </div>
-          <div class="col-12 sm:col-6 lg:col-4 mb-3">
-            <p-card class="shadow-2 border-round-xl text-center">
-              <h3 class="fw-bold text-info">24/7</h3>
-              <p class="mb-0">Learning & Improving</p>
-            </p-card>
-          </div>
+    <div class="grid align-items-center justify-content-center">
+      <!-- Left Profile Card -->
+      <div
+        class="col-12 md:col-4 mb-5 md:mb-0 flex justify-content-center"
+        data-aos="fade-right"
+      >
+        <div class="profile-card shadow-6 p-4 border-round-3xl">
+          <img src="/assets/Profile.png" alt="Profile" class="profile-img border-circle mb-4" />
+          <h3 class="text-2xl font-bold mb-1 text-white">Divyesh Gawad</h3>
+          <p class="text-warning text-sm mb-3">Full-Stack Developer</p>
+          <p class="text-400 mb-4 text-sm">
+            Passionate about crafting <b>scalable web apps</b> using
+            <b>Angular, Spring Boot</b>, and <b>MongoDB</b>.
+            I enjoy building clean, optimized, and user-focused solutions.
+          </p>
+          <a href="/assets/resume/Divyesh Gawad Resume.pdf" target="_blank" rel="noopener noreferrer">
+            <button
+              pButton
+              label="Download CV"
+              icon="pi pi-download"
+              class="p-button-rounded p-button-primary px-5"
+            ></button>
+          </a>
         </div>
       </div>
 
-    </div>
-  </div>
-</section> -->
-<div class="about-section py-6">
-  <div class="container text-center">
-    <h2 class="text-5xl font-bold text-warning mb-2">About Me</h2>
-    <p class="text-lg text-600 text-white mb-6">A little journey of who I am 🚀</p>
-
-    <div class="grid align-items-center">
-      
-      <!-- Profile Card -->
-      <div class="col-12 md:col-4 mb-2 md:mb-0">
-        <div class="profile-card shadow-5 p-4 border-round-3xl">
-          <img src="https://i.pinimg.com/originals/39/33/f6/3933f64de1724bb67264818810e3f2cb.jpg?nii=t" alt="Profile"
-               class="profile-img border-circle mb-4" />
-          <h3 class="text-2xl font-bold mb-2">Jagruti Tatar</h3>
-          <p class="text-600 text-warning mb-3">Full-Stack Developer</p>
-          <button pButton label="Download CV" icon="pi pi-download"
-                  class="p-button-rounded p-button-primary"></button>
-        </div>
-      </div>
-
-      <!-- Timeline About -->
-      <div class="col-12 md:col-8">
+      <!-- Right Timeline -->
+      <div class="col-12 md:col-6" data-aos="fade-left">
         <ul class="timeline">
-          <li>
-            <div class="timeline-icon bg-primary text-white">
-              <!-- <i class="pi pi-user text-3xl"></i> -->
-            </div>
-            <div class="timeline-content shadow-2 p-3 border-round-2xl">
-              <h4>Who Am I?</h4>
-              <p>
-                A developer who loves blending creativity with logic. 
-                Passionate about <b>Angular, Spring Boot, and Cloud</b>.
+          <li data-aos="fade-left" data-aos-delay="150">
+            <div class="timeline-icon bg-warning text-black font-bold">1</div>
+            <div class="timeline-content shadow-2 p-4 border-round-xl">
+              <h4 class="text-xl font-semibold text-warning mb-2">Who Am I?</h4>
+              <p class="text-300">
+                A problem solver who loves combining <b>creativity and logic</b>.
+                Building elegant and efficient web apps is my passion.
               </p>
             </div>
           </li>
-          <li>
-            <div class="timeline-icon bg-primary text-white">
-              <!-- <i class="pi pi-briefcase text-3xl"></i> -->
-            </div>
-            <div class="timeline-content shadow-2 p-3 border-round-2xl">
-              <h4>Experience</h4>
-              <p>
-                Built scalable apps for startups and enterprises. 
-                Strong background in <b>UI/UX + backend systems</b>.
+
+          <li data-aos="fade-left" data-aos-delay="300">
+            <div class="timeline-icon bg-warning text-black font-bold">2</div>
+            <div class="timeline-content shadow-2 p-4 border-round-xl">
+              <h4 class="text-xl font-semibold text-warning mb-2">Experience</h4>
+              <p class="text-300">
+                Worked on projects involving <b>Angular + Spring Boot</b> stacks,
+                delivering seamless UI/UX and strong backend systems.
               </p>
             </div>
           </li>
-          <li>
-            <div class="timeline-icon bg-primary text-white">
-              <!-- <i class="pi pi-star text-3xl"></i> -->
-            </div>
-            <div class="timeline-content shadow-2 p-3 border-round-2xl">
-              <h4>What I Do</h4>
-              <p>
-                Turning ideas into polished products.  
-                Focused on <b>clean code, design, and performance</b>.
+
+          <li data-aos="fade-left" data-aos-delay="450">
+            <div class="timeline-icon bg-warning text-black font-bold">3</div>
+            <div class="timeline-content shadow-2 p-4 border-round-xl">
+              <h4 class="text-xl font-semibold text-warning mb-2">What I Do</h4>
+              <p class="text-300">
+                I turn ideas into powerful, scalable apps — with a focus on
+                <b>performance, maintainability, and design precision</b>.
               </p>
             </div>
           </li>
         </ul>
       </div>
-
     </div>
   </div>
 </div>

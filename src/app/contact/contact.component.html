@@ -1,3 +1,5 @@
+<p-toast position="top-center"></p-toast>
+
 <div class="contact-section py-6 px-3 min-h-screen">
   <div class="container mx-auto">
     <div class="grid justify-content-center">
@@ -5,70 +7,80 @@
       <!-- Heading -->
       <div class="col-12 text-center mb-5">
         <h2 class="text-4xl font-bold text-warning mb-2">Contact Me</h2>
-        <p class="text-600 text-white">Let’s connect! Feel free to reach out for projects, collaborations, or just to say hi.</p>
+        <p class="text-600 text-white">
+          Let’s connect! Feel free to reach out for projects, collaborations, or just to say hi.
+        </p>
       </div>
 
       <!-- Contact Form + Info -->
       <div class="col-12 lg:col-8">
-        <div class="grid contact-card shadow-5 border-round-3xl bg-white p-5">
+        <div class="grid contact-card shadow-5 border-round-3xl border-2 p-5 custom-border">
 
           <!-- Contact Form -->
           <div class="col-12 md:col-7 pr-4">
-            <h3 class="text-3xl font-semibold mb-3 text-primary">Send a Message</h3>
+            <h3 class="text-3xl font-semibold mb-3 text-white">Send a Message</h3>
+
             <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
 
               <!-- Name -->
               <div class="mb-3">
-                <label for="name" class="block font-medium mb-1">Your Name</label>
+                <label for="name" class="block font-medium text-white mb-1">Your Name</label>
                 <input id="name" type="text" pInputText formControlName="name" class="w-full custom-input"
                   placeholder="Enter your name" />
               </div>
 
               <!-- Email -->
               <div class="mb-3">
-                <label for="email" class="block font-medium mb-1">Email</label>
+                <label for="email" class="block font-medium text-white mb-1">Email</label>
                 <input id="email" type="email" pInputText formControlName="email" class="w-full custom-input"
                   placeholder="Enter your email" />
               </div>
 
               <!-- Message -->
               <div class="mb-3">
-                <label for="message" class="block font-medium mb-1">Message</label>
+                <label for="message" class="block font-medium text-white mb-1">Message</label>
                 <textarea id="message" rows="4" pInputTextarea formControlName="message" class="w-full custom-input"
                   placeholder="Write your message..."></textarea>
               </div>
 
-              <p-button label="Send Message" icon="pi pi-send" type="submit"
-                styleClass="w-full p-button-rounded p-button-lg" severity="info"></p-button>
+              <!-- Button + Spinner -->
+              <div class="mt-4">
+                <p-button
+                  [label]="loading ? 'Sending...' : 'Send Message'"
+                  icon="pi pi-send"
+                  type="submit"
+                  [disabled]="contactForm.invalid || loading"
+                  styleClass="w-full p-button-rounded p-button-lg"
+                  severity="success">
+                </p-button>
+
+                <div *ngIf="loading" class="flex justify-content-center mt-3">
+                  <i class="pi pi-spin pi-spinner text-2xl text-success"></i>
+                </div>
+              </div>
             </form>
           </div>
 
-          <!-- Contact Info -->
-
+          <!-- Contact Info (Right Side) -->
           <div class="col-12 md:col-5 pl-4">
-            <h3 class="text-3xl font-semibold mb-4 text-primary">Get In Touch</h3>
+            <h3 class="text-3xl font-semibold mb-4 text-white">Get In Touch</h3>
 
-            <!-- Contact Cards -->
             <div class="flex flex-column gap-3">
-
-              <!-- Email -->
-              <div class="contact-info-card flex align-items-center p-1 border-round-lg shadow-1">
+              <div class="contact-info-card flex align-items-center p-1 border-round-lg shadow-1 custom-border text-white">
                 <div class="icon-circle bg-primary flex align-items-center justify-content-center mr-3">
                   <i class="pi pi-envelope icn text-lg"></i>
                 </div>
                 <span class="text-700">tatarjagruti&#64;gmail.com</span>
               </div>
 
-              <!-- Phone -->
-              <div class="contact-info-card flex align-items-center p-1 border-round-lg shadow-1">
+              <div class="contact-info-card flex align-items-center p-1 border-round-lg shadow-1 custom-border text-white">
                 <div class="icon-circle bg-green-500 flex align-items-center justify-content-center mr-3">
                   <i class="pi pi-phone icn text-lg"></i>
                 </div>
                 <span class="text-700">+91 9850730370</span>
               </div>
 
-              <!-- Location -->
-              <div class="contact-info-card flex align-items-center p-1 border-round-lg shadow-1">
+              <div class="contact-info-card flex align-items-center p-1 border-round-lg shadow-1 custom-border text-white">
                 <div class="icon-circle bg-orange-500 flex align-items-center justify-content-center mr-3">
                   <i class="pi pi-map-marker icn text-lg"></i>
                 </div>
@@ -76,21 +88,18 @@
               </div>
             </div>
 
-            <!-- Socials -->
-            <h4 class="mt-5 mb-3 text-primary">Connect with Me</h4>
+            <!-- Social Icons -->
+            <h4 class="mt-5 mb-3 text-white">Connect with Me</h4>
             <div class="flex gap-4">
               <a href="#" class="social-btn"><i class="pi pi-linkedin text-3xl"></i></a>
-              <a href="#" class="social-btn text-black-alpha-90"><i class="pi pi-github text-3xl"></i></a>
-              <a href="#" class="social-btn text-info"><i class="pi pi-twitter text-3xl"></i></a>
-              <a href="#" class="social-btn text-success"><i class="pi pi-whatsapp text-3xl"></i></a>
+              <a href="#" class="social-btn"><i class="pi pi-github text-3xl"></i></a>
+              <a href="#" class="social-btn"><i class="pi pi-twitter text-3xl"></i></a>
+              <a href="#" class="social-btn"><i class="pi pi-whatsapp text-3xl"></i></a>
             </div>
           </div>
-
         </div>
       </div>
 
     </div>
   </div>
 </div>
-
-<p-toast></p-toast>

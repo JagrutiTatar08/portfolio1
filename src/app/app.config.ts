@@ -5,6 +5,7 @@ import { provideClientHydration } from '@angular/platform-browser';
 
 import Aura from '@primeng/themes/aura';
 import { routes } from './app.routes';
+import { provideNoopAnimations } from '@angular/platform-browser/animations';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -17,6 +18,7 @@ export const appConfig: ApplicationConfig = {
       })
     ),   // 👈 registers Angular Router
     provideClientHydration(),
+    provideNoopAnimations(),
     providePrimeNG({
       theme: {
         preset: Aura

@@ -1,61 +1,104 @@
+/* FontAwesome Icons Styling */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 
-
-/* .skill-card {
-  transition: all 0.3s ease;
-  border: 3px solid rgba(53, 212, 191, 0.911);
+.skills-section {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.85),
+      rgba(0, 0, 0, 0.85)
+    ),
+    url('https://t4.ftcdn.net/jpg/08/14/54/71/360_F_814547144_an4xSu5K7CVQM1oAukpYURr3h3fUqeql.jpg')
+      no-repeat center center / cover;
+  color: #fff;
+  overflow: hidden;
+  padding-bottom: 4rem;
 }
 
-.skill-card:hover {
-  transform: translateY(-6px) scale(1.05);
-  box-shadow: 0 8px 20px rgba(224, 111, 111, 0.899);
-  border: 2px solid #d6f065;
+.carousel-wrapper {
+  width: 100%;
+  overflow: hidden;
+  padding: 2rem 0;
+}
+
+.carousel {
+  display: flex;
+  gap: 6rem;
+  width: max-content;
+  animation: scroll 25s linear infinite;
+}
+
+.skill-item {
+  flex: 0 0 auto;
+  text-align: center;
+  transition: transform 0.4s ease, filter 0.4s ease;
 }
 
 .skill-icon {
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
-} */
-
-.skills-section {
-  /* background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); */
-  height: 90vh;
-   background: linear-gradient(
-      rgba(0, 0, 0, 0.6), 
-      rgba(0, 0, 0, 0.6)
-    ), 
-    url('https://t4.ftcdn.net/jpg/08/14/54/71/360_F_814547144_an4xSu5K7CVQM1oAukpYURr3h3fUqeql.jpg') no-repeat center center/cover;
-  color: #fff;
-}
-
-.skill-galaxy {
-  gap: 2rem;
-}
-
-.planet {
-  text-align: center;
-  width: 110px;
-  transition: transform 0.3s ease;
-}
-.planet:hover {
-  transform: scale(1.15) rotate(5deg);
-}
-
-.planet-circle {
-  width: 80px;
-  height: 80px;
+  font-size: 4rem;
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  padding: 2rem;
+  width: 140px;
+  height: 140px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
-  color: #fff;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
-  animation: orbit 6s infinite ease-in-out alternate;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
 }
 
-@keyframes orbit {
-  0% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-12px) rotate(3deg); }
-  100% { transform: translateY(0px) rotate(0deg); }
+.skill-item:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 20px #f0d942);
+}
+
+.skill-item:hover .skill-icon {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.skill-item p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+/* Infinite scroll animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .carousel {
+    gap: 3rem;
+    animation-duration: 35s;
+  }
+
+  .skill-icon {
+    font-size: 2.5rem;
+    width: 100px;
+    height: 100px;
+  }
+
+  .skill-item p {
+    font-size: 0.9rem;
+  }
+}
+
+.skill-icon img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2));
+  transition: transform 0.3s ease;
+}
+
+.skill-item:hover img {
+  transform: scale(1.15);
 }
